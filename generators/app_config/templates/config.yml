@@ -1,0 +1,10 @@
+common:
+  support_email: admin@myapp.com
+  root_url: myapp.com
+
+production:
+  email_exceptions: true
+
+development:
+  support_email: user@localhost
+  root_url: localhost:3000

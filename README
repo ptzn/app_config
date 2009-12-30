@@ -1,0 +1,28 @@
+= AppConfig
+
+Very simple Rails plugin for storing application specific configuration, e.g. emails, urls, etc.
+Based on http://kpumuk.info/ruby-on-rails/flexible-application-configuration-in-ruby-on-rails/
+
+== Description
+
+You can create config.yml file by hand in #{RAILS_ROOT}/config directory, or using generator:
+
+script/generate app_config
+
+Here is config.yml content sample:
+
+common:
+  support_email: admin@myhost.com
+  root_url: myhost.com
+  photos_max_number: 6
+
+production:
+  email_exceptions: true
+
+development:
+  root_url: localhost:3000
+  photos_max_number: 10
+
+Sections are not required, so you can leave only that you need.
+
+Now you can use theese values as AppConfig.NAME, for example AppConfig.support_email, AppConfig.root_url, etc.
